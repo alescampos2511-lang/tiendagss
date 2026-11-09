@@ -1,0 +1,20 @@
+{
+  "name": "nutrista-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file-if-exists=.env src/index.ts",
+    "start": "node --env-file-if-exists=.env src/index.ts",
+    "seed": "node --env-file-if-exists=.env src/seed.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.6",
+    "hono": "^4.13.17"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}

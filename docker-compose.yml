@@ -1,0 +1,15 @@
+services:
+    nutrista:
+        build: .
+        image: nutrista:latest
+        container_name: nutrista
+        ports:
+            - '${PORT:-3000}:3000'
+        environment:
+            ADMIN_TOKEN: ${ADMIN_TOKEN:?Define ADMIN_TOKEN en el archivo .env}
+        volumes:
+            - nutrista-data:/app/data
+        restart: unless-stopped
+
+volumes:
+    nutrista-data:
